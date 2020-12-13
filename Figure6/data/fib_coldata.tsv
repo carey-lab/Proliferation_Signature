@@ -1,0 +1,9 @@
+id	condition
+FIB_slow1	slow
+FIB_slow2	slow
+FIB_slow3	slow
+FIB_slow4	slow
+FIB_fast1	fast
+FIB_fast2	fast
+FIB_fast3	fast
+FIB_fast4	fast

@@ -1,0 +1,150 @@
+Cell type	UMAP	 of cells	 of UMI	Median UMI/cell	" cells with embryo time< 390 minutes"	" cells with embryo time in [390, 510) minutes"	" cells with embryo time in [510, 650) minutes"	" cells with embryo time >= 650 minutes"	"Cumulative terminal cell type count"	Notes
+Body_wall_muscle	Muscle and mesoderm	1120	3226015	2543	1120	0	0	0	0	This annotation is given to cells that could be identified as BWM but are too early to express position marker genes.
+BWM_head_row_1	Muscle and mesoderm	2384	5167636	1807	693	1204	287	200	1	We count head and non-head BWM as separate cell types, but do not distinguish between subsets of non-head BWM.
+BWM_head_row_2	Muscle and mesoderm	2106	3772372	1551	776	1079	161	90	1	See above.
+BWM_anterior	Muscle and mesoderm	5191	11193801	1805	2246	2468	375	102	2	See above.
+BWM_posterior	Muscle and mesoderm	5737	11934975	1742	2274	2542	689	232	2	See above.
+BWM_far_posterior	Muscle and mesoderm	982	1980348	1709	475	382	98	27	2	See above.
+Coelomocyte	Muscle and mesoderm	787	1099227	1227	239	521	27	0	3	Some cells with this annotation are from before the ~440 minute coelomocyte division, but we make an exception and call them "terminal" cells as they express marker genes of differentiated coelomocytes.
+GLR	Muscle and mesoderm	768	982630	1139	651	117	0	0	4	
+hmc_and_homolog	Muscle and mesoderm	122	148678	1168	120	2	0	0	4	This annotation is given to cells in the hmc/hmc_homolog UMAP trajectory before the branch point that distinguishes these two cell types.
+hmc	Muscle and mesoderm	189	250280	1163	5	129	55	0	5	
+hmc_homolog	Muscle and mesoderm	155	201301	1208	25	130	0	0	5	We do not count the hmc homolog as a "terminal" cell type as it dies in the embryo.
+M_cell	Muscle and mesoderm	315	757271	2170	45	172	16	82	6	We include the founders of post-embryonic lineages in our embryonic "terminal" cell type count as they do not divide until after embryonic development.
+Intestinal_and_rectal_muscle	Muscle and mesoderm	88	115802	1082	77	11	0	0	6	This annotation is given to cells that could be identified as mu_int, mu_anal, or mu_sph but are from earlier embryos before the split between mu_int_mu_anal and mu_sph is apparent in the UMAP.
+mu_int_mu_anal	Muscle and mesoderm	363	540514	1184	61	183	98	21	8	We count mu_int and mu_anal as separate anatomical cell types due to their morphology despite them being transcriptomically similar/identical in our data.
+mu_sph	Muscle and mesoderm	117	127801	1013	0	59	53	5	9	
+Z1_Z4	Muscle and mesoderm	372	481159	1211	289	36	3	44	10	
+g1A_g1P	Pharynx	142	243913	1603	29	108	5	0	10	This annotation is given to cells in the g1A/g1P UMAP trajectory before the branch point that distinguishes these two cell types.
+g1A	Pharynx	178	351876	1688	0	0	147	31	11	
+g1P	Pharynx	123	290673	2180	0	12	88	23	12	
+g2	Pharynx	216	287058	1101	174	32	10	0	13	
+Pharyngeal_marginal_cell	Pharynx	179	437689	1781	179	0	0	0	13	This annotation is given to cells that could be identified as mc1 or mc2 but are too early and do not yet express mc1 vs. mc2 marker genes.
+mc1	Pharynx	168	578108	1677	158	10	0	0	14	We count mc1 and mc2 as a single cell type due to transcriptomic similarity, but count mc3 as a separate cell type due to transcriptomic dissimilarity.
+mc2	Pharynx	190	396318	1676	139	51	0	0	14	
+mc3	Pharynx	374	684667	1480	331	43	0	0	15	
+Pharyngeal_intestinal_valve	Pharynx	496	760173	1391	332	103	61	0	16	
+pm1_pm2	Pharynx	197	413917	1097	47	140	10	0	17	Counting pm1 and pm2 as a single cell type.
+pm3_pm4_pm5	Pharynx	1849	3788767	1704	1533	241	75	0	18	Counting pm3, pm4, and pm5 as a single cell type.
+pm6	Pharynx	144	252746	1574	95	49	0	0	19	
+pm7	Pharynx	270	469249	1587	203	64	3	0	20	
+pm8	Pharynx	32	42740	1297	13	19	0	0	21	
+Pharyngeal_muscle_incomplete_dissociation	Pharynx	70	882928	13111	0	0	70	0	21	This annotation is given to cells from late embryos that have a transcriptional profile similar to pm3_pm4_pm5, but also have UMIs from neuron-specific genes, suggesting that dissociation of these differentiated muscle cells and the neurons that innervate them was incomplete.
+Anterior_arcade_cell	Pharynx	151	199376	1079	17	49	85	0	22	Anterior and posterior arcade cells appear to converge to a common transcriptomic profile, so we count them as a single cell type.
+Posterior_arcade_cell	Pharynx	209	252644	969	3	56	150	0	22	See above.
+Arcade_cell_anterior_and_posterior	Pharynx	45	51845	999	0	0	33	12	22	See above. This annotation is given to arcade cells post the apparent convergence point in the UMAP.
+hyp1_hyp2	Pharynx	346	566759	1133	85	95	159	7	23	
+Pharyngeal_neuron	Pharynx	1225	1823509	1320	1221	4	0	0	23	This annotation is given to cells that could be identified as pharyngeal neurons, but could not be associated with a particular neuron class.
+MC	Pharynx	58	75917	1029	22	36	0	0	24	
+Intestine	Intestine	777	6085908	6809	726	51	0	0	24	This annotation is given to cells that could be identified as intestine but are too early to express position marker genes.
+Intestine_anterior	Intestine	301	3595402	10607	1	93	47	160	25	We count anterior and middle/posterior intestine as separate cell types, but do not distinguish between middle-posterior and far-posterior as in our UMAP they are transcriptomically more similar.
+Intestine_far_posterior	Intestine	160	1403164	7561	0	59	49	52	26	
+Intestine_middle_and_posterior	Intestine	494	4329327	7687	24	198	28	244	26	
+Hypodermis	Hypodermis and seam cells	2296	5232549	1606	559	751	961	25	26	This annotation is given to cells that could be identified as hypodermis (hyp4-7) but could not be identified with a particular hypodermal subtype or lineage. This includes both very early cells and late cells.
+hyp4_hyp5_hyp6	Hypodermis and seam cells	687	2264786	2448	585	102	0	0	27	hyp4-6, hyp7 AB lineage, and hyp7 C lineage appear to converge in terms of transcriptomic profile, so we count them as one cell type.
+hyp7_AB_lineage	Hypodermis and seam cells	1057	4689518	3887	811	246	0	0	27	See above.
+hyp7_C_lineage	Hypodermis and seam cells	1774	8554489	4425	1256	518	0	0	27	See above.
+Tail_hypodermis	Hypodermis and seam cells	387	1090533	1892	125	186	76	0	28	
+P_cell	Hypodermis and seam cells	1037	3177508	2702	746	291	0	0	29	
+Seam_cell	Hypodermis and seam cells	2770	8699760	2699	1225	749	758	38	30	
+G2_and_W_blasts	Hypodermis and seam cells	72	92415	1153	72	0	0	0	30	Not included in our cell type count as we only recover early, mostly undifferentiated cells.
+Glia	Glia and excretory cells	2084	3215653	1368	2063	20	1	0	30	This annotation is given to cells that could be identified as glia but for which we were unable to identify a specific glial subtype. We do not include this in our cell type count.
+AMsh	Glia and excretory cells	392	737652	1800	80	138	58	116	31	
+ADEsh	Glia and excretory cells	71	59229	789	6	48	17	0	32	
+CEPsh	Glia and excretory cells	127	105965	759	13	103	11	0	33	
+ILsh_OLLsh_OLQsh	Glia and excretory cells	190	151643	718	0	176	14	0	34	
+AMso	Glia and excretory cells	224	236852	920	66	62	96	0	35	
+CEPso	Glia and excretory cells	288	258173	789	24	220	44	0	36	
+ILso	Glia and excretory cells	174	160050	810	11	120	43	0	37	
+hyp3	Glia and excretory cells	115	144715	1064	72	41	2	0	38	
+Excretory_cell	Glia and excretory cells	215	991956	4559	43	62	83	27	39	
+Excretory_duct_and_pore	Glia and excretory cells	91	126540	1032	33	53	5	0	40	
+Excretory_gland	Glia and excretory cells	204	195021	871	42	106	32	24	41	
+XXX	Glia and excretory cells	25	15960	624	5	18	2	0	42	Very tentative annotation. See note in Table S1.
+Possibly_hyp1V	Glia and excretory cells	56	71808	1180	0	0	56	0	42	Very tentative annotation. See note in Table S1.
+Possibly_ant_arc_V	Glia and excretory cells	29	61969	1892	0	6	23	0	42	Very tentative annotation. See note in Table S1.
+Possibly_hyp1V_and_ant_arc_V	Glia and excretory cells	112	138420	1111	48	59	5	0	42	
+Germline	Early embryo, germline, and rectum	515	4215054	7595	436	3	1	75	43	
+ADE	Ciliated neurons	90	95624	855	0	65	23	2	44	
+ADF	Ciliated neurons	170	196212	1069	1	89	55	25	45	
+ADF_AWB	Ciliated neurons	102	104121	957	52	50	0	0	45	"This annotation is given to cells that we think are daughters of the ADF-AWB neuroblast, but appear to not yet express marker genes that distinguish ADF from AWB.These cells co-express lag-1 (which persists in differentiated ADF) and lim-4 (which persists in differentiated AWB).The latest cells in this group have embryo time ~400."
+ADL	Ciliated neurons	477	697320	1291	103	156	106	112	46	
+AFD	Ciliated neurons	326	369882	1033	84	73	114	55	47	
+ASE	Ciliated neurons	282	468083	1469	36	145	48	53	48	
+ASG	Ciliated neurons	173	171776	890	3	48	119	3	49	
+ASG_AWA	Ciliated neurons	99	98193	873	71	28	0	0	49	This annotation is given to cells that we think are daughters of the ASG-AWA neuroblast, but appear to not yet express marker genes that distinguish ASG from AWA.
+ASH	Ciliated neurons	345	384080	1019	107	105	75	58	50	
+ASI	Ciliated neurons	212	209109	882	0	87	122	3	51	
+ASJ	Ciliated neurons	320	421385	1170	51	148	68	53	52	
+ASK	Ciliated neurons	233	248201	939	0	124	95	14	53	
+AWA	Ciliated neurons	236	230315	877	30	110	65	31	54	
+AWB	Ciliated neurons	212	203193	872	4	146	62	0	55	
+AWC	Ciliated neurons	309	317190	951	48	132	88	41	56	
+BAG	Ciliated neurons	265	279032	952	0	153	87	25	57	
+CEP	Ciliated neurons	152	143468	799	0	111	39	2	58	
+IL1	Ciliated neurons	164	133541	750	1	117	36	10	59	
+IL2	Ciliated neurons	391	437707	908	82	187	108	14	60	
+OLL	Ciliated neurons	108	95545	823	0	60	46	2	61	
+OLQ	Ciliated neurons	254	246218	857	1	114	129	10	62	
+PHB_and_possibly_PHA	Ciliated neurons	83	85886	876	0	65	18	0	63	
+URX	Ciliated neurons	230	230652	867	10	68	78	74	64	
+AIA	Non-ciliated neurons	56	66530	1054	0	2	50	4	65	
+AIB	Non-ciliated neurons	126	104845	756	19	53	34	20	66	
+AIM	Non-ciliated neurons	94	79232	751	37	33	22	2	67	
+AIN	Non-ciliated neurons	64	51287	720	11	34	12	7	68	
+AIY	Non-ciliated neurons	149	139288	784	1	22	70	56	69	
+AIZ	Non-ciliated neurons	39	30750	697	0	27	12	0	70	
+ALA	Non-ciliated neurons	122	126594	896	23	15	65	19	71	
+ALM_PLM	Non-ciliated neurons	76	70345	874	0	0	6	70	73	We count the ALM and PLM neuron classes as separate cell types even though they are transcriptomically similar/identical in our data.
+ALM_BDU	Non-ciliated neurons	90	83354	872	1	44	45	0	73	
+ALN	Non-ciliated neurons	28	25212	703	5	16	7	0	74	
+AUA	"Non-ciliated neurons andCiliated neurons"	154	147396	842	37	72	45	0	75	Early AUA cells are in the "Ciliated neuron" UMAP, while differentiated AUA cells are in the "Non-ciliated neuron" UMAP.
+AVA	Non-ciliated neurons	248	252994	920	108	98	20	22	76	
+AVB	Non-ciliated neurons	187	156088	771	74	57	8	48	77	
+AVD	Non-ciliated neurons	99	84308	720	10	54	24	11	78	
+AVE	Non-ciliated neurons	177	153502	818	81	62	32	2	79	
+AVG	Non-ciliated neurons	125	158310	1015	56	26	43	0	80	
+AVH	Non-ciliated neurons	94	80780	713	22	32	35	5	81	
+AVJ	Non-ciliated neurons	53	39057	688	23	26	4	0	82	
+AVK	Non-ciliated neurons	336	329770	855	15	156	97	68	83	
+AVL	Non-ciliated neurons	114	119485	874	28	50	15	21	84	
+CAN	Non-ciliated neurons	332	393782	1106	50	213	69	0	85	
+DA	Non-ciliated neurons	529	522698	825	191	289	49	0	86	
+DA_DB	Non-ciliated neurons	173	143753	718	0	1	144	28	86	This annotation is given to differentiated DA/DB neurons after their UMAP trajectories converge.
+DB	Non-ciliated neurons	491	518242	919	292	175	24	0	87	
+DD	Non-ciliated neurons	326	444441	996	186	85	42	13	88	
+DVA	Non-ciliated neurons	99	106170	851	31	24	20	24	89	
+DVC	Non-ciliated neurons	101	89354	847	31	31	26	13	90	
+FLP	Non-ciliated neurons	19	15775	802	6	13	0	0	91	
+I5	Non-ciliated neurons	83	86872	979	45	18	20	0	92	
+PLM	Non-ciliated neurons	16	14224	969	0	0	16	0	92	This annotation is given to a few cells that appear to be early terminal PLM neurons, before ALM and PLM converge to a common transcriptomic profile.
+PVP	Non-ciliated neurons	116	100393	796	26	42	36	12	93	
+PVQ_and_possibly_PVC	Non-ciliated neurons	48	49283	867	23	16	9	0	94	
+PVR	Non-ciliated neurons	14	13147	935	14	0	0	0	94	Not included in our cell type count as we only recover early, mostly undifferentiated cells.
+PVT	Non-ciliated neurons	54	63710	1012	15	2	21	16	95	
+RIA	Non-ciliated neurons	260	244755	843	74	68	100	18	96	
+RIB	Non-ciliated neurons	86	70337	745	2	36	48	0	97	
+RIC	Non-ciliated neurons	69	71430	851	9	37	23	0	98	
+RID	Non-ciliated neurons	55	60244	966	25	12	18	0	99	
+RIH	Non-ciliated neurons	38	42907	958	4	30	4	0	100	
+RIM	Non-ciliated neurons	157	138627	775	24	91	28	14	101	
+RIS	Non-ciliated neurons	127	127907	930	11	43	38	35	102	
+RIV	Non-ciliated neurons	198	193298	870	62	79	46	11	103	
+RMD	Non-ciliated neurons	199	212835	872	42	68	77	12	104	
+RME	Non-ciliated neurons	335	335996	844	162	98	64	11	105	
+RMED	Non-ciliated neurons	25	46365	1705	25	0	0	0	105	This annotation is given to cells that were identified as RMED (after the division of the ALA-RMED neuroblast) but are early enough that they cluster closer to ALA and the parent neuroblast than to the rest of RME.
+SIA	Non-ciliated neurons	200	167010	775	79	92	29	0	106	
+SIB	Non-ciliated neurons	124	98182	706	20	103	1	0	107	
+SMB	Non-ciliated neurons	177	144551	726	81	59	37	0	108	
+SMD	Non-ciliated neurons	303	254236	759	77	142	63	21	109	
+URB_and_possibly_URA	Non-ciliated neurons	93	77246	718	51	30	12	0	110	
+T	Time 350min hypodermis + glia	141	295116	1957	141	0	0	0	110	Not included in our cell type count as we only recover early, mostly undifferentiated cells.
+Excretory_duct	Duct and pore	26	51710	1810	0	26	0	0	110	This annotation is a redundant subset of the annotation "Excretory_duct_and_pore". See note in Table S1. 
+Excretory_pore_G1	Duct and pore	19	25592	1093	2	17	0	0	110	This annotation is a redundant subset of the annotation "Excretory_duct_and_pore". See note in Table S1. 
+B	Rectal cells	35	44460	1167	35	0	0	0	110	This annotation includes early cells only. Differentiated rectal cells form a single UMAP cluster and are annotated as "B_F_K_Kp_U_Y".
+F_U	Rectal cells	47	72650	1022	47	0	0	0	110	See above.
+K_Kprime	Rectal cells	39	51226	1077	39	0	0	0	110	See above.
+Y	Rectal cells	43	60585	1028	43	0	0	0	110	See above.
+B_F_K_Kp_U_Y	Rectal cells	166	451856	2100	2	53	111	0	111	See above. Since differentiated rectal cells for a single UMAP cluster, we count them as one cell type.
+rect_D	Rectal cells	20	17671	854	20	0	0	0	111	This annotation includes early cells only. Differentiated rectal gland cells are annotated as "Rectal_gland".
+Rectal_gland	Rectal cells	249	758031	2177	2	105	130	12	112	
