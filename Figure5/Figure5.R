@@ -1274,3 +1274,138 @@ ggsave2('E:/Project/2019__proliferation/figures/C.elegans part figures/C.elegans
 
 
 
+
+
+
+
+# FIGURE S4A ------------------------------------
+# figure, density plot to show most of the gene have 0 expression-----------------
+
+set.seed(1000)
+cell_1000 <- data.frame(
+  cell_1000=as.vector(assayData_eset_norm_exprs_filter[,sample(1:89701, 1000, replace=FALSE)])
+)
+
+ggplot(cell_1000, aes(x=cell_1000)) + 
+  geom_histogram(aes(y=..density..),colour="black", fill="white")+
+  #geom_density(alpha=.2, fill="#FF6666")+
+  labs(x="Counts(UMI)",y="Density") +
+  ggplot_theme_pdf
+
+table(cell_1000==0)
+19326178/(895822+19326178)
+
+# 0.9557006
+
+ggsave2('E:/Project/2019__proliferation/figures/C.elegans part figures/20201028 1000cellUMI density.pdf', width = 65, height = 65, units = "mm")
+# FIGURE S4D and S4E ------------------------------------
+
+setwd('E:/Project/2019__proliferation/11.celegant_scRNAseq/C.elegant cell number vs time')
+
+
+
+# read the webplot data--------
+
+webplotdata <- read.table('./webplot.csv',sep=',')
+
+
+colnames(webplotdata) <- c('time','cellnumber')
+
+webplotdata <- webplotdata[order(webplotdata$time),]
+
+rownames(webplotdata) <- 1:nrow(webplotdata)
+
+
+plot(webplotdata)
+
+webplotdata <- webplotdata[c(10,15,24,37,47,54,57,61,63,67,72,75,78,81,84),]
+
+webplotdata <- rbind(c(0,1),webplotdata)
+webplotdata <- as.data.frame(webplotdata)
+webplotdata$log2cellnumber <- log2(webplotdata$cellnumber)
+
+#webplotdata <- webplotdata[c(1,seq(2,16,2)),]
+
+
+
+plot(webplotdata$time,webplotdata$log2cellnumber, xlab='embryo time (min)',ylab='Log2 of cell number',type = "b", lty = 1,lwd=2,pch=19,col='purple',cex=1.5)
+
+plot(diff(webplotdata$log2cellnumber)/diff(webplotdata$time),type = "b", lty = 1,lwd=2,pch=19,col='purple',cex=1.5,
+     ylab = "", xaxt='n',xlab = "", yaxt='n')
+
+
+
+
+library(ggplot2)
+
+
+ggplot_theme_pdf <- theme(
+  plot.title = element_text(lineheight=.8, size=20,hjust = 0.5),
+  axis.title.x = element_text(color="black", size=10),
+  axis.title.y = element_text(color="black", size=10),
+  #delete background
+  panel.grid.major =element_blank(),
+  panel.grid.minor = element_blank(),
+  panel.background = element_blank(),
+  
+  #加上坐标轴
+  axis.line = element_line(colour = "black",size=0.5),
+  #刻度线
+  axis.ticks = element_line(size=0.5),
+  axis.ticks.length=unit(-0.1,"cm"),
+  
+  #x轴标签
+  axis.text.x = element_text(size=10,color='black',margin = margin(t=0.2, unit = "cm")),
+  #y轴标签
+  axis.text.y = element_text(size=10,color='black',margin = margin(r=0.2, unit = "cm")),
+  #图例
+  legend.title = element_text(colour="black", size=10),
+  #legend.title = element_blank(colour="black", size=10),
+  #legend.text = element_blank()
+  legend.text = element_text(colour="black", size=10)
+  # remove legend
+  ,legend.position="none"
+)
+
+
+
+
+ggplot(data=webplotdata,aes(x=time,y=log2cellnumber,group=1)) +
+  geom_line() +
+  geom_point(size=1.5,col='purple') +
+  labs(x='Time (minutes)',y='Log2 of cell number') +
+  #annotate("text", x=400, y=50, label= "R = -0.85",size=6,col='black') +
+  ggplot_theme_pdf
+
+library(cowplot)
+ggsave2('E:/Project/2019__proliferation/figures/C.elegans part figures/20201001 C.elegans cell number line plot 1.pdf', width = 60, height = 50, units = "mm")
+
+
+
+rollmean(x, 3)
+
+plot(diff(data$cellnumber)/diff(data$etime),type = "b", lty = 1,lwd=2,pch=19,col='purple',cex=1.5,
+     ylab = "", xaxt='n',xlab = "", yaxt='n')
+
+
+library(zoo)
+diff_webplotdata <- data.frame(matrix(nrow=15))
+diff_webplotdata$diff_time <- rollmean(webplotdata$time,2)
+diff_webplotdata$diff_log2cellnumber_change <- diff(webplotdata$log2cellnumber)/diff(webplotdata$time)
+
+
+
+ggplot(data=diff_webplotdata,aes(x=diff_time,y=diff_log2cellnumber_change,group=1)) +
+  geom_line() +
+  geom_point(size=1.5,col='purple') +
+  labs(x='Time (minutes)',y='Proliferation rate') +
+  #annotate("text", x=400, y=50, label= "R = -0.85",size=6,col='black') +
+  ggplot_theme_pdf
+
+library(cowplot)
+ggsave2('E:/Project/2019__proliferation/figures/C.elegans part figures/20201001 C.elegans cell number line plot2.pdf', width = 60, height = 50, units = "mm")
+
+
+
+
+

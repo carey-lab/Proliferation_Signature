@@ -1,0 +1,9 @@
+id,condition,batch
+ESC_high1,high,1
+ESC_high2,high,2
+ESC_high3,high,3
+ESC_high4,high,4
+ESC_slow1,slow,1
+ESC_slow2,slow,2
+ESC_slow3,slow,3
+ESC_slow4,slow,4
