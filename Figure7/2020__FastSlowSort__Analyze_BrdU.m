@@ -1,5 +1,5 @@
 %% load data
-WORKDIR  = '~/Develop/Proliferation_Signature_Public/Figure7/' ;
+WORKDIR  = './' ;
 BRDU = [ WORKDIR 'data/2020__FastSlowSort__Brdu_data.xlsx' ] ;
 VIAB = [ WORKDIR 'data/2020__FastSlowSort__viability_data.xlsx' ] ;
 
@@ -197,7 +197,7 @@ c = multcompare( stats , 'Dimension' , [1 3])
 
 %% publication quality figures
 % show difference in % BrdU+, as expected from the sort
-figname = '~/Downloads/Sorted_Cells_BrdU_DMSO_drug_barplots' ; 
+figname = './Sorted_Cells_BrdU_DMSO_drug_barplots' ; 
 
 T=E(E.Drug=='DMSO',:);
 
